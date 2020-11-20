@@ -17,7 +17,7 @@ namespace RepositoryLayer.Service
 {
     public class UserRL : IUserRL
     {
-        private UserManager<IdentityUser> _userManger;
+        /*private UserManager<IdentityUser> _userManger;*/
 
         /// <summary>
         /// create field for configuration 
@@ -36,7 +36,7 @@ namespace RepositoryLayer.Service
         public UserRL(IConfiguration configuration, UserManager<IdentityUser> userManager)
         {
             this.configuration = configuration;
-            this._userManger = userManager;
+            /*this._userManger = userManager;*/
         }
 
         /// <summary>
@@ -49,16 +49,16 @@ namespace RepositoryLayer.Service
         {
             try
             {
-                    var identityUser = new IdentityUser
+                   /* var identityUser = new IdentityUser
                     {
                         Email = user.EmailId,
                         UserName = user.FirstName,
                     };
 
-                     var result = await _userManger.CreateAsync(identityUser, user.Password);
+                     var result = await _userManger.CreateAsync(identityUser, user.Password);*/
 
-                if (result.Succeeded)
-                {
+                /*if (result.Succeeded)
+                {*/
 
                     int status = 0;
                     string Role = "User";
@@ -71,12 +71,12 @@ namespace RepositoryLayer.Service
                     sqlCommand.Parameters.AddWithValue("@UserRole", Role);
                     sqlCommand.Parameters.AddWithValue("@EmailId", user.EmailId);
                     sqlCommand.Parameters.AddWithValue("@Password", user.Password);
-                    /*sqlCommand.Parameters.AddWithValue("@Locality", user.Locality);
+                    sqlCommand.Parameters.AddWithValue("@Locality", user.Locality);
                     sqlCommand.Parameters.AddWithValue("@City", user.City);
-                    sqlCommand.Parameters.AddWithValue("@State", user.State);*/
+                    sqlCommand.Parameters.AddWithValue("@State", user.State);
                     sqlCommand.Parameters.AddWithValue("@PhoneNumber", user.PhoneNumber);
-                    /*sqlCommand.Parameters.AddWithValue("@PinCode", user.PinCode);
-                    sqlCommand.Parameters.AddWithValue("@LandMark", user.LandMark);*/
+                    sqlCommand.Parameters.AddWithValue("@PinCode", user.PinCode);
+                    sqlCommand.Parameters.AddWithValue("@LandMark", user.LandMark);
                     this.sqlConnectionVariable.Open();
 
                     SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
@@ -95,7 +95,7 @@ namespace RepositoryLayer.Service
                             return null;
                         }
                     }
-                }
+                /*}*/
                 return null;
             }
             catch (Exception exception)
@@ -115,19 +115,19 @@ namespace RepositoryLayer.Service
         {
             try
             {
-                var users = await _userManger.FindByEmailAsync(user.EmailId);
+/*                var users = await _userManger.FindByEmailAsync(user.EmailId);
 
                 if (user == null)
                 {
                     throw new Exception(UserException.ExceptionType.INVALID_EMAIL_IDENTITY.ToString());
                 }
 
-                var result = await _userManger.CheckPasswordAsync(users, user.Password);
+                var result = await _userManger.CheckPasswordAsync(users, user.Password);*/
 
-                if (!result)
+                /*if (!result)
                 {
                     throw new Exception(UserException.ExceptionType.INVALID_PASSWORD_IDENTITY.ToString());
-                }
+                }*/
 
                     int status = 0;
                     RUserLoginModel usermodel = new RUserLoginModel();

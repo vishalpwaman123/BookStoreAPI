@@ -89,7 +89,6 @@ namespace RepositoryLayer.Service
                     wishListData.BookId = Convert.ToInt32(dataRow["BookId"].ToString());
                     wishListData.IsMoved = Convert.ToBoolean(dataRow["IsMoved"].ToString()) == true ? "Yes" : "No";
                     wishListData.CreatedDate = Convert.ToDateTime(dataRow["ModificationDate"]);
-                    wishListData.BookDetail = SearchBookById(wishListData.BookId);
                     wishLists.Add(wishListData);
                 }
                 if (wishLists.Count != 0)
@@ -179,56 +178,6 @@ namespace RepositoryLayer.Service
             }
         }
 
-        /// <summary>
-        /// search books by book title
-        /// </summary>
-        /// <param name="bookName"></param>
-        /// <returns></returns>
-        public RBookAddModel SearchBookById(int bookId)
-        {
-            try
-            {
-                DatabaseConnection databaseConnection = new DatabaseConnection(this.configuration);
-                List<StoredProcedureParameter> paramList = new List<StoredProcedureParameter>();
-                paramList.Add(new StoredProcedureParameter("@BookId", bookId));
-
-                DataTable table = databaseConnection.StoredProcedureExecuteReader("spSearchBookById", paramList);
-                var bookData = new RBookAddModel();
-                IList<RBookAddModel> bookList = new List<RBookAddModel>();
-                bookData = null;
-                foreach (DataRow dataRow in table.Rows)
-                {
-                    bookData = new RBookAddModel();
-                    bookData.BookID = (int)dataRow["BookID"];
-                    if (bookData.BookID == 0)
-                    {
-                        return null;
-                    }
-                    bookData.AdminID = (int)dataRow["AdminID"];
-                    bookData.BookName = dataRow["BookName"].ToString();
-                    bookData.AuthorName = dataRow["AuthorName"].ToString();
-                    bookData.Description = dataRow["Description"].ToString();
-                    bookData.Quantity = Convert.ToInt32(dataRow["Quantity"]);
-                    bookData.Price = Convert.ToInt32(dataRow["Price"]);
-                    bookData.Pages = Convert.ToInt32(dataRow["Pages"]);
-                    bookData.CreatedDate = dataRow["ModificationDate"].ToString();
-                    bookData.ImageLink = dataRow["Image"].ToString() == "" ? "Not Available" : dataRow["Image"].ToString();
-                    bookData.Updater_AdminId = Convert.ToInt32(dataRow["Updater_AdminId"]);
-                }
-                if (bookData != null)
-                {
-                    return bookData;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
 
     }
 }

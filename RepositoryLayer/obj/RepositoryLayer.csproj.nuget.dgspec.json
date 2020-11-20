@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj": {}
+    "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj": {
+    "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj",
         "projectName": "CommonLayer",
-        "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj",
+        "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj",
         "packagesPath": "C:\\Users\\Vishal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\obj\\",
+        "outputPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vishal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj",
         "packagesPath": "C:\\Users\\Vishal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\obj\\",
+        "outputPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vishal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,8 +94,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj": {
-                "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj"
+              "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj": {
+                "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj"
               }
             }
           }

@@ -216,7 +216,7 @@ namespace TestProject
         /// <summary>
         /// given request for register admin should return ok
         /// </summary>
-       /* [Fact]
+        [Fact]
         public void GivenTestCase_WhenSortBookByName_ShouldReturnOkObjectResult()
         {
 
@@ -224,7 +224,7 @@ namespace TestProject
             var response = booksController.SortBook(attribute);
             Assert.IsType<BadRequestObjectResult>(response);
         }
-*/
+
         /// <summary>
         /// given request for register admin should return ok
         /// </summary>

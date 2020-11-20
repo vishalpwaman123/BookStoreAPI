@@ -11676,11 +11676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BookStoreAPI\\BookStoreAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj",
       "projectName": "BookStoreAPI",
-      "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BookStoreAPI\\BookStoreAPI.csproj",
+      "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BookStoreAPI\\BookStoreAPI.csproj",
       "packagesPath": "C:\\Users\\Vishal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BookStoreAPI\\obj\\",
+      "outputPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BookStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vishal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11696,14 +11696,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj": {
-              "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj"
+            "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj": {
+              "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj"
             },
-            "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }

@@ -13,7 +13,5 @@ namespace CommonLayer.ResponseModel
         public string IsMoved { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public RBookAddModel BookDetail;
-
     }
 }

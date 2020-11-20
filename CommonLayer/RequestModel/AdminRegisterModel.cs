@@ -8,6 +8,10 @@ namespace CommonLayer.RequestModel
 {
     public class AdminRegisterModel
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int AdminID { get; set; }
+
         [Required(ErrorMessage = "First name is required")]
         [RegularExpression("^([a-zA-Z]{2,})$", ErrorMessage = "First Name should contain atleast 2 or more characters")]
         public string AdminName { get; set; }
@@ -20,9 +24,9 @@ namespace CommonLayer.RequestModel
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Phone Number is Required")]
-        [RegularExpression("([1-9]{1}[0-9]{9})$")]
-        public string PhoneNumber { get; set; }
+        [Required]
+        [RegularExpression("^(?:m|M|male|Male|f|F|female|Female)$", ErrorMessage = "Not valid Gender eg : Male Or Female")]
+        public string Gender { get; set; }
 
     }
 }

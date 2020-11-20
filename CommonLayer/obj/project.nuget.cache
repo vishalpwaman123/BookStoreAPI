@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pQwUZC63OJcewoSp+FggI51vNy3hSFDFQWiVwfb6yuegkBZZrrIpD06s1vwMYZ/4kUe4M53LQZvuVRX+H6o4Hw==",
+  "dgSpecHash": "vKx88xY4LKRI/UTtJx176cEdwNE18N2GBh1EqbWPM9OgElM7W5pxniUwqxwb246FKmYFZzpbCXjV0Ag9XKbEGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\CommonLayer\\CommonLayer.csproj",
+  "projectFilePath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\CommonLayer\\CommonLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vishal\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.0\\microsoft.aspnetcore.authentication.2.1.0.nupkg.sha512",
     "C:\\Users\\Vishal\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.0\\microsoft.aspnetcore.authentication.abstractions.2.1.0.nupkg.sha512",

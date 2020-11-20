@@ -121,11 +121,11 @@ namespace BusinessLayer.Service
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public List<RBookAddModel> SortBook( int Flag, int subflag)
+        public List<RBookAddModel> SortBook( int Flag)
         {
             try
             {
-                return this.bookRL.SortBook( Flag, subflag);
+                return this.bookRL.SortBook( Flag);
             }
             catch (Exception exception)
             {

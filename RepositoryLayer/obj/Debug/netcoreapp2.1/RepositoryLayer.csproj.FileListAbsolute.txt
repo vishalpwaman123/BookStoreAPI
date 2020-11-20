@@ -22,15 +22,3 @@ C:\Users\Vishal\source\BookStoreAPI-master\RepositoryLayer\obj\Debug\netcoreapp2
 C:\Users\Vishal\source\BookStoreAPI-master\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.csproj.CopyComplete
 C:\Users\Vishal\source\BookStoreAPI-master\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.dll
 C:\Users\Vishal\source\BookStoreAPI-master\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\bin\Debug\netcoreapp2.1\RepositoryLayer.deps.json
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\bin\Debug\netcoreapp2.1\RepositoryLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\bin\Debug\netcoreapp2.1\RepositoryLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\bin\Debug\netcoreapp2.1\CommonLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\bin\Debug\netcoreapp2.1\CommonLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.csprojAssemblyReference.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.AssemblyInfoInputs.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.AssemblyInfo.cs
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.csproj.CoreCompileInputs.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.csproj.CopyComplete
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\RepositoryLayer\obj\Debug\netcoreapp2.1\RepositoryLayer.pdb

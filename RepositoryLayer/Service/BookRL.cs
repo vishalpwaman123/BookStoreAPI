@@ -108,6 +108,41 @@ namespace RepositoryLayer.Service
                 };
 
                 var uploadResult =  cloudinary.Upload(uploadParams);
+
+                /*   int Flag = 0;
+                DatabaseConnection databaseConnection = new DatabaseConnection(this.configuration);
+                SqlConnection sqlConnection = databaseConnection.GetConnection();
+                SqlCommand sqlCommand = databaseConnection.GetCommand("spAddImage", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@BookID", BookID);
+                //sqlCommand.Parameters.AddWithValue("@Flag", Flag);
+                sqlCommand.Parameters.AddWithValue("@AdminID", AdminID);*//*
+                sqlCommand.Parameters.AddWithValue("@Image", uploadResult.Url.ToString());
+                *//*sqlConnection.Open();
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                RImageAddModel bookAddModel = new RImageAddModel();
+                while (sqlDataReader.Read())
+                {
+                    status = sqlDataReader.GetInt32(0);
+                    if (status == 0)
+                    {
+                        return null;
+                    }  
+                    bookAddModel.BookID = (int)sqlDataReader["BookID"];
+                    bookAddModel.AdminID = (int)sqlDataReader["AdminID"];
+                    bookAddModel.BookName = sqlDataReader["BookName"].ToString();
+                    bookAddModel.AuthorName = sqlDataReader["AuthorName"].ToString();
+                    bookAddModel.Description = sqlDataReader["Description"].ToString();
+                    bookAddModel.Price = Convert.ToInt32(sqlDataReader["Price"]);
+                    bookAddModel.Pages = Convert.ToInt32(sqlDataReader["Pages"]);
+                    bookAddModel.CreatedDate = sqlDataReader["ModificationDate"].ToString();
+                    bookAddModel.Quantity = Convert.ToInt32(sqlDataReader["Quantity"]);
+                    bookAddModel.ImageLink = sqlDataReader["Image"].ToString() == "" ? "Not Available" : sqlDataReader["Image"].ToString();
+                    bookAddModel.Updater_AdminId = Convert.ToInt32(sqlDataReader["Updater_AdminId"]);
+                    if (bookAddModel.BookID == BookID)
+                    {
+                        return bookAddModel;
+                    }
+                }*/
                 return uploadResult.Url.ToString();
             }
             catch (Exception exception)
@@ -269,7 +304,7 @@ namespace RepositoryLayer.Service
         /// get all books 
         /// </summary>
         /// <returns></returns>
-        public List<RBookAddModel> SortBook(int Flag, int subflag)
+        public List<RBookAddModel> SortBook(int Flag)
         {
             try
             {
@@ -278,7 +313,6 @@ namespace RepositoryLayer.Service
 
                 //paramList.Add(new StoredProcedureParameter("@Attribute", attribute));
                 paramList.Add(new StoredProcedureParameter("@Flag", Flag));
-                paramList.Add(new StoredProcedureParameter("@SubFlag", subflag));
                 DataTable table = databaseConnection.StoredProcedureExecuteReader("spGetAllSortBooks", paramList);
 
                 var bookData = new RBookAddModel();
@@ -361,7 +395,45 @@ namespace RepositoryLayer.Service
                     bookData.Updater_AdminId = Convert.ToInt32(dataRow["Updater_AdminId"]);
                 }
                 return bookData;
-                
+                /* int status;
+                 DatabaseConnection databaseConnection = new DatabaseConnection(this.configuration);
+                 SqlConnection sqlConnection = databaseConnection.GetConnection();
+                 SqlCommand sqlCommand = databaseConnection.GetCommand("spUpdateBook", sqlConnection);
+                 sqlCommand.Parameters.AddWithValue("@BookId", updateBookModel.BookId);
+                 //sqlCommand.Parameters.AddWithValue("@AttributeName", updateBookModel.AttributeName);
+
+                 sqlCommand.Parameters.AddWithValue("@AdminID", claimId);
+  *//*               sqlCommand.Parameters.AddWithValue("@Flag", flag);*//*
+                 sqlConnection.Open();
+                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                 RBookAddModel bookAddModel = new RBookAddModel();
+                 while (sqlDataReader.Read())
+                 {
+                     bookAddModel = new RBookAddModel();
+                     status = sqlDataReader.GetInt32(0);
+                     if (status == 0)
+                     {
+                         throw new Exception(BookException.ExceptionType.INVALID_BOOKID.ToString());
+                     }
+                     bookAddModel.BookID = (int)sqlDataReader["BookID"];
+                     bookAddModel.AdminID = (int)sqlDataReader["AdminID"];
+                     bookAddModel.BookName = sqlDataReader["BookName"].ToString();
+                     bookAddModel.AuthorName = sqlDataReader["AuthorName"].ToString();
+                     bookAddModel.Description = sqlDataReader["Description"].ToString();
+                     bookAddModel.Price = Convert.ToInt32(sqlDataReader["Price"]);
+                     bookAddModel.Pages = Convert.ToInt32(sqlDataReader["Pages"]);
+                     bookAddModel.CreatedDate = sqlDataReader["ModificationDate"].ToString();
+                     bookAddModel.Quantity = Convert.ToInt32(sqlDataReader["Quantity"]);
+                     bookAddModel.ImageLink = sqlDataReader["Image"].ToString() == "" ? "Not Available" : sqlDataReader["Image"].ToString();
+                     bookAddModel.Updater_AdminId = Convert.ToInt32(sqlDataReader["Updater_AdminId"]);
+                     if (bookAddModel.BookID == updateBookModel.BookId)
+                     {
+                         return bookAddModel;
+                     }
+                 }
+                 sqlConnection.Close();
+                 return null;*/
             }
             catch (Exception e)
             {

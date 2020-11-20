@@ -46,7 +46,7 @@ namespace BusinessLayer.Interface
         /// </summary>
         /// <param name="bookName"></param>
         /// <returns></returns>
-        List<RBookAddModel> SortBook( int Flag, int subflag);
+        List<RBookAddModel> SortBook( int Flag);
 
         /// <summary>
         /// 

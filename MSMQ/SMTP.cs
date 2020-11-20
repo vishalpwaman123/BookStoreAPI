@@ -17,13 +17,13 @@ namespace MSMQ
                 var mail = new MimeMessage();
 
                 // mail sender
-                mail.From.Add(address: new MailboxAddress("Book Store", "1001thebeast1001@gmail.com"));
+                mail.From.Add(address: new MailboxAddress("Parking Lot", "1001thebeast1001@gmail.com"));
 
                 // messsage reciever
-                mail.To.Add(new MailboxAddress("Book Store", "1001thebeast1001@gmail.com"));
+                mail.To.Add(new MailboxAddress("Parking Lot", "1001thebeast1001@gmail.com"));
 
                 // subject of email
-                mail.Subject = "Forget Password";
+                mail.Subject = "Registration";
 
                 // body of email
                 mail.Body = new TextPart("plain")

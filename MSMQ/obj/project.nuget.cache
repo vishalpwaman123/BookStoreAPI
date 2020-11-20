@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3BCPValBtWJwLEeDrFu4d0latjvhqAekhItpAnIt9XAXihBKV95g8E14ke9sfz6Tu66oztLPx9FSlJ9Cy5pBAg==",
+  "dgSpecHash": "ttP0TRTA6JO3NSVlWsD3DyjP5guIn6X2KD89iNRI1xkkB1iRUmfYImn9PuTjjxdT9M1tj505QTOLwZTk0IB1mQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\MSMQ\\MSMQ.csproj",
+  "projectFilePath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\MSMQ\\MSMQ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vishal\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512",
     "C:\\Users\\Vishal\\.nuget\\packages\\mailkit\\2.1.1\\mailkit.2.1.1.nupkg.sha512",

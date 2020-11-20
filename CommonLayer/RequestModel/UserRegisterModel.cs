@@ -9,12 +9,16 @@ namespace CommonLayer.RequestModel
     public class UserRegisterModel
     {
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UserID { get; set; }
+
         [Required(ErrorMessage = "Firstname is Required")]
-        [RegularExpression(@"^[a-zA-Z]*$")]
+        [RegularExpression(@"^[A-Z][a-zA-Z]*$")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Lastname is Required")]
-        [RegularExpression(@"^[a-zA-Z]*$")]
+        [RegularExpression(@"^[A-Z][a-zA-Z]*$")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "EmailId is Required")]
@@ -26,18 +30,19 @@ namespace CommonLayer.RequestModel
         [StringLength(50, MinimumLength = 6, ErrorMessage = "Please Enter Minimum 6 Characters ")]
         public string Password { get; set; }
 
-        /*public string Locality { get; set; }
+        public string Locality { get; set; }
 
         public string City { get; set; }
 
-        public string State { get; set; }*/
+        public string State { get; set; }
 
         [Required(ErrorMessage = "Phone Number is Required")]
         [RegularExpression("([1-9]{1}[0-9]{9})$")]
         public string PhoneNumber { get; set; }
 
-        /*public string PinCode { get; set; }
+        public string PinCode { get; set; }
 
-        public string LandMark { get; set; }*/
+        public string LandMark { get; set; }
+
     }
 }

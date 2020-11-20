@@ -26,17 +26,3 @@ C:\Users\Vishal\source\BookStoreAPI-master\BusinessLayer\obj\Debug\netcoreapp2.1
 C:\Users\Vishal\source\BookStoreAPI-master\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csproj.CopyComplete
 C:\Users\Vishal\source\BookStoreAPI-master\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.dll
 C:\Users\Vishal\source\BookStoreAPI-master\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.deps.json
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\CommonLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\RepositoryLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\CommonLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\bin\Debug\netcoreapp2.1\RepositoryLayer.pdb
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csprojAssemblyReference.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.AssemblyInfo.cs
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csproj.CopyComplete
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.dll
-C:\Users\Vishal\source\BookStoreAPI(New1)\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.pdb

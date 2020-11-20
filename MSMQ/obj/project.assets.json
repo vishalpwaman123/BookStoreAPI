@@ -5503,11 +5503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\MSMQ\\MSMQ.csproj",
+      "projectUniqueName": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\MSMQ\\MSMQ.csproj",
       "projectName": "MSMQ",
-      "projectPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\MSMQ\\MSMQ.csproj",
+      "projectPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\MSMQ\\MSMQ.csproj",
       "packagesPath": "C:\\Users\\Vishal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\MSMQ\\obj\\",
+      "outputPath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\MSMQ\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vishal\\AppData\\Roaming\\NuGet\\NuGet.Config",

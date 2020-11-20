@@ -15,7 +15,5 @@ namespace CommonLayer.ResponseModel
         public string IsActive;
 
         public string CreatedDate;
-
-        public RBookAddModel BookDetail;
     }
 }

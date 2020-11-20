@@ -14,7 +14,7 @@ namespace TestProject
 {
     public class AdminTestCase
     {
-        /*UserManager<IdentityUser> userManager;*/
+        UserManager<IdentityUser> userManager;
 
         AdminController adminController;
 
@@ -27,7 +27,7 @@ namespace TestProject
         /// <summary>
         /// initializes the fields
         /// </summary>
-        /*public AdminTestCase()
+       /* public AdminTestCase()
         {
             IConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.AddJsonFile("appsettings.json");
@@ -58,7 +58,7 @@ namespace TestProject
             {
                 AdminName = null,
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "123456",
             };
             var response = adminController.RegisterAdmin(data);
@@ -75,7 +75,7 @@ namespace TestProject
             {
                 AdminName = "Vishal",
                 AdminEmailId = null,
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "123456",
             };
             var response = adminController.RegisterAdmin(data);
@@ -91,7 +91,7 @@ namespace TestProject
             {
                 AdminName = "Vishal",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = null,
+                Gender = null,
                 Password = "123456",
             };
             var response = adminController.RegisterAdmin(data);
@@ -107,7 +107,7 @@ namespace TestProject
             {
                 AdminName = "Vishal",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = null,
             };
             var response = adminController.RegisterAdmin(data);
@@ -123,7 +123,7 @@ namespace TestProject
             {
                 AdminName = "",
                 AdminEmailId = "",
-                PhoneNumber = "",
+                Gender = "",
                 Password = "",
             };
             var response = adminController.RegisterAdmin(data);
@@ -139,7 +139,7 @@ namespace TestProject
             {
                 AdminName = "",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "12345",
             };
             var response = adminController.RegisterAdmin(data);
@@ -156,7 +156,7 @@ namespace TestProject
             {
                 AdminName = "vishal",
                 AdminEmailId = "",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "12345",
             };
             var response = adminController.RegisterAdmin(data);
@@ -173,7 +173,7 @@ namespace TestProject
             {
                 AdminName = "vishal",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "",
+                Gender = "",
                 Password = "12345",
             };
             var response = adminController.RegisterAdmin(data);
@@ -190,7 +190,7 @@ namespace TestProject
             {
                 AdminName = "vishal",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "",
             };
             var response = adminController.RegisterAdmin(data);
@@ -204,7 +204,7 @@ namespace TestProject
             {
                 AdminName = "vishal",
                 AdminEmailId = "vishal@gmail.com",
-                PhoneNumber = "9881563158",
+                Gender = "Male",
                 Password = "vishal",
             };
             var response = adminController.RegisterAdmin(data);

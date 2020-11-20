@@ -55,13 +55,13 @@ namespace BookStoreAPI.Controllers
             try
             {
                 //Throws Custom Exception When Fields are Null.
-                if (adminRegisterModel.AdminName == null || adminRegisterModel.Password == null || adminRegisterModel.AdminEmailId == null || adminRegisterModel.PhoneNumber == null )
+                if (adminRegisterModel.AdminName == null || adminRegisterModel.Password == null || adminRegisterModel.AdminEmailId == null || adminRegisterModel.Gender == null )
                 {
                     throw new Exception(AdminExceptions.ExceptionType.NULL_EXCEPTION.ToString());
                 }
 
                 //Throws Custom Exception When Fields are Empty Strings.
-                if (adminRegisterModel.AdminName == "" || adminRegisterModel.Password == "" || adminRegisterModel.AdminEmailId == "" || adminRegisterModel.PhoneNumber == "")
+                if (adminRegisterModel.AdminName == "" || adminRegisterModel.Password == "" || adminRegisterModel.AdminEmailId == "" || adminRegisterModel.Gender == "")
                 {
                     throw new Exception(AdminExceptions.ExceptionType.EMPTY_EXCEPTION.ToString());
                 }
@@ -157,7 +157,6 @@ namespace BookStoreAPI.Controllers
                     string message = "\n EMAIL ID: \t" + Convert.ToString(responseUser.AdminEmailId) +
                   "\n ROLE: \t" + Convert.ToString(responseUser.Role) +
                   "\n API TOKEN : \t" + token +
-                  "\nClick Next Link :http://localhost:4200/ResetPassword/" + token+
                   "\n Thank You";
 
 

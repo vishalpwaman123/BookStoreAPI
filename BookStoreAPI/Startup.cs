@@ -34,7 +34,6 @@ namespace BookStoreAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => { options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials()); });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<IAdminBL, AdminBL>();
@@ -108,7 +107,6 @@ namespace BookStoreAPI
 
             app.UseHttpsRedirection();
             app.UseSwagger();
-            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseSwaggerUI(
                 c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Core API"); }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w3P7aKUBRKgU09ZkYl50QyuO1PUreyLmfvb7OD7xHTYhzB0kNsnd0MfG0xdu3nWhdEqr/xwfRk1fx2war+h3og==",
+  "dgSpecHash": "c1IXX5YchWJHI1nkcEEyjs8AZd2FiX841HWtk0xNYpt6vqsxPC4Jc9JzVJmz6/5QVLxEz2YIq4SuAMi37MTS/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vishal\\source\\BookStoreAPI(New1)\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Vishal\\source\\repos\\BookStoreAPI\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vishal\\.nuget\\packages\\cloudinarydotnet\\1.11.0\\cloudinarydotnet.1.11.0.nupkg.sha512",
     "C:\\Users\\Vishal\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.0\\microsoft.aspnetcore.authentication.2.1.0.nupkg.sha512",

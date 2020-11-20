@@ -51,6 +51,11 @@ namespace TestProject
                 LastName="",
                 EmailId="",
                 Password="",
+                PinCode="",
+                LandMark="",
+                Locality = "",
+                City = "",
+                State = "",
                 PhoneNumber = ""
             };
             var response = userController.RegisterUser(data);
@@ -69,6 +74,11 @@ namespace TestProject
                 LastName = null,
                 EmailId = null,
                 Password = null,
+                PinCode = null,
+                LandMark = null,
+                Locality = null,
+                City = null,
+                State = null,
                 PhoneNumber = null
             };
             var response = userController.RegisterUser(data);

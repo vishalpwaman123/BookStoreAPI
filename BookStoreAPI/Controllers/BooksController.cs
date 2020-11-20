@@ -83,6 +83,82 @@ namespace BookStoreAPI.Controllers
             }
         }
 
+        /*[Authorize(Roles = "admin")]
+        [HttpPost]
+        [Route("Image")]
+        public IActionResult AddImage(int BookID, IFormFile Image)
+        {
+            try
+            {
+                
+                int claimId = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+                if (BookID > 0 )
+                {
+                    if (Image == null)
+                    {
+                        throw new Exception(BookException.ExceptionType.NULL_EXCEPTION.ToString());
+                    }
+
+                    var data = this.bookBL.AddImage(claimId, BookID, Image);
+                    if (data != null)
+                    {
+                        return this.Ok(new { status = "True", message = "Image Added Successfully", data });
+                    }
+                    else
+                    {
+                        return this.Conflict(new { status = "False", message = "Failed To Add Image" });
+                    }
+                }
+                else
+                {
+                    return this.BadRequest(new { status = "False", message = "Failed To Add Book" });
+                }
+            }
+
+            catch (Exception exception)
+            {
+                return BadRequest(new { message = exception.Message });
+            }
+        }*/
+
+        /*[Authorize(Roles = "admin")]
+        [HttpPut]
+        [Route("Image")]
+        public IActionResult UpdateImage(int BookID, IFormFile Image)
+        {
+            try
+            {
+
+                int claimId = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Id").Value);
+                if (BookID > 0)
+                {
+                    if (Image == null)
+                    {
+                        throw new Exception(BookException.ExceptionType.NULL_EXCEPTION.ToString());
+                    }
+
+                    var data = this.bookBL.AddImage(claimId, BookID, Image);
+                    if (data != null)
+                    {
+                        return this.Ok(new { status = "True", message = "Image Update Successfully", data });
+                    }
+                    else
+                    {
+                        return this.Conflict(new { status = "False", message = "Failed To Update Image" });
+                    }
+                }
+                else
+                {
+                    return this.BadRequest(new { status = "False", message = "Failed To Add Book" });
+                }
+            }
+
+            catch (Exception exception)
+            {
+                return BadRequest(new { message = exception.Message });
+            }
+        }*/
+
         [HttpGet]
         [Route("")]
         [AllowAnonymous]
@@ -162,71 +238,50 @@ namespace BookStoreAPI.Controllers
         }
 
         [HttpGet]
-        [Route("sort")]
+        [Route("Sort")]
         [AllowAnonymous]
-        public IActionResult SortBook([FromQuery] SortModel attribute)
+        public IActionResult SortBook(String attribute)
         {
             try
             {
                 if (attribute != null)
                 {
-                    int flag = -1, subflag = -1;
-                    if ((attribute.attribute.Equals(Attributes.AuthorName.ToString())) || (attribute.attribute.Equals(Attributes.Authorname.ToString())) ||
-                        (attribute.attribute.Equals(attributes.authorname.ToString())))
+                    int flag = -1;
+                    if ((attribute.Equals(Attributes.AuthorName.ToString())) || (attribute.Equals(Attributes.Authorname.ToString())) ||
+                        (attribute.Equals(attributes.authorname.ToString())))
                     {
                         flag = 0;
                     }
                     else
-                    if ((attribute.attribute.Equals(Attributes.BookName.ToString())) || (attribute.attribute.Equals(Attributes.Bookname.ToString())) ||
+                    if ((attribute.Equals(Attributes.BookName.ToString())) || (attribute.Equals(Attributes.Bookname.ToString())) ||
                         (attribute.Equals(attributes.bookname.ToString())))
                     {
                         flag = 1;
                     }
                     else
-                    if ((attribute.attribute.Equals(Attributes.Description.ToString())) || (attribute.attribute.Equals(attributes.authorname.ToString())))
+                    if ((attribute.Equals(Attributes.Description.ToString())) || (attribute.Equals(attributes.authorname.ToString())))
                     {
                         flag = 2;
                     }
                     else
-                    if ((attribute.attribute.Equals(Attributes.Pages.ToString())) || (attribute.attribute.Equals(attributes.pages.ToString())))
+                    if ((attribute.Equals(Attributes.Pages.ToString())) || (attribute.Equals(attributes.pages.ToString())))
                     {
                         flag = 3;
                     }
                     else
-                    if ((attribute.attribute.Equals(Attributes.Price.ToString())) || (attribute.attribute.Equals(attributes.price.ToString())))
+                    if ((attribute.Equals(Attributes.Price.ToString())) || (attribute.Equals(attributes.price.ToString())))
                     {
                         flag = 4;
                     }
                     else
-                    if ((attribute.attribute.Equals(Attributes.Quantity.ToString())) || (attribute.attribute.Equals(attributes.quantity.ToString())))
+                    if ((attribute.Equals(Attributes.Quantity.ToString())) || (attribute.Equals(attributes.quantity.ToString())))
                     {
                         flag = 5;
                     }
 
-                    
                     if (flag != -1)
                     {
-
-                        if ((attribute.operation.Equals(Operations.LowToHigh.ToString())) || (attribute.operation.Equals(operations.lowtohigh.ToString())))
-                        {
-                            subflag = 11;
-                        }else
-                        if ((attribute.operation.Equals(Operations.HighToLow.ToString())) || (attribute.operation.Equals(operations.hightolow.ToString())))
-                        {
-                            subflag = 12;
-                        }
-                        else
-                        if ((attribute.operation.Equals(Operations.NewestArrive.ToString())) || (attribute.operation.Equals(operations.newestarrive.ToString())))
-                        {
-                            subflag = 13;
-                        }
-                        else
-                        if ((attribute.operation.Equals(Operations.OldestArrive.ToString())) || (attribute.operation.Equals(operations.oldestarrive.ToString())))
-                        {
-                            subflag = 14;
-                        }
-
-                        var data = this.bookBL.SortBook(flag, subflag);
+                        var data = this.bookBL.SortBook(flag);
                         if (data != null)
                         {
                             return this.Ok(new { status = "True", message = "Sort Books by Name Sucessfully", data });

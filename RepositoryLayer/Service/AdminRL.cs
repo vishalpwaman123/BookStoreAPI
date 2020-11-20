@@ -49,7 +49,7 @@ namespace RepositoryLayer.Service
                     sqlCommand.Parameters.AddWithValue("@AdminName", adminRegisterModel.AdminName);
                     sqlCommand.Parameters.AddWithValue("@AdminEmailId", adminRegisterModel.AdminEmailId);
                     sqlCommand.Parameters.AddWithValue("@Password", adminRegisterModel.Password);
-                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", adminRegisterModel.PhoneNumber);
+                    sqlCommand.Parameters.AddWithValue("@Gender", adminRegisterModel.Gender);
                     sqlCommand.Parameters.AddWithValue("@Role", userType);
                     sqlConnection.Open();
                     SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
@@ -68,7 +68,7 @@ namespace RepositoryLayer.Service
                         userData.AdminName = sqlDataReader["AdminName"].ToString();
                         userData.AdminEmailId = sqlDataReader["AdminEmailId"].ToString();
                         userData.Role = sqlDataReader["Role"].ToString();
-                        userData.PhoneNumber = sqlDataReader["MobileNumber"].ToString();
+                        userData.Gender = sqlDataReader["Gender"].ToString();
                         userData.CreatedDate = sqlDataReader["ModificationDate"].ToString();
                     
                 }
@@ -123,7 +123,7 @@ namespace RepositoryLayer.Service
                     userData.AdminName = sqlDataReader["AdminName"].ToString();
                     userData.AdminEmailId = sqlDataReader["AdminEmailId"].ToString();
                     userData.Role = sqlDataReader["Role"].ToString();
-                    userData.PhoneNumber = sqlDataReader["MobileNumber"].ToString();
+                    userData.Gender = sqlDataReader["Gender"].ToString();
                     userData.CreatedDate = sqlDataReader["ModificationDate"].ToString();
                 }
 
@@ -198,7 +198,7 @@ namespace RepositoryLayer.Service
                     {
                         rUser.CreatedDate = sqlDataReader["ModificationDate"].ToString();
                         rUser.AdminName = sqlDataReader["AdminName"].ToString();
-                        rUser.PhoneNumber = sqlDataReader["MobileNumber"].ToString();
+                        rUser.Gender = sqlDataReader["Gender"].ToString();
                         rUser.Role = sqlDataReader["Role"].ToString();
                         rUser.AdminEmailId = sqlDataReader["AdminEmailId"].ToString();
                         return rUser;
