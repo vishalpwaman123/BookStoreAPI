@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CommonLayer.Exceptions
+{
+    public class UserException : Exception
+    {
+
+        /// <summary>
+        /// Enum For Exception types.
+        /// </summary>
+        public enum ExceptionType
+        {
+            INVALID_ROLE_EXCEPTION,
+            NULL_EXCEPTION,
+            EMPTY_EXCEPTION,
+            INVALID_MATCH_PASSWORD_EXCEPTION,
+            INVALID_EMAIL_IDENTITY,
+            INVALID_PASSWORD_IDENTITY
+        }
+
+        /// <summary>
+        /// Exception type Reference.
+        /// </summary>
+        ExceptionType type;
+
+        /// <summary>
+        /// Constrcutor For Setting Exception Type.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="message"></param>
+        public UserException(UserException.ExceptionType type, string message) : base(message)
+        {
+            this.type = type;
+        }
+
+
+    }
+}

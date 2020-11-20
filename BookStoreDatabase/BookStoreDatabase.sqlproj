@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>BookStoreDatabase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{d681c69a-05f8-47f7-96c5-2f8907ffbcb4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>BookStoreDatabase</RootNamespace>
+    <AssemblyName>BookStoreDatabase</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="StoreProcedure" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Admin.sql" />
+    <Build Include="Books.sql" />
+    <Build Include="Cart.sql" />
+    <Build Include="Orders.sql" />
+    <Build Include="UserAddress.sql" />
+    <Build Include="Users.sql" />
+    <Build Include="WishList.sql" />
+    <Build Include="StoreProcedure\GetUserWishList.sql" />
+    <Build Include="StoreProcedure\spAddBook.sql" />
+    <Build Include="StoreProcedure\spAdminEmailCheck.sql" />
+    <Build Include="StoreProcedure\spAdminLogin.sql" />
+    <Build Include="StoreProcedure\spAdminRegistration.sql" />
+    <Build Include="StoreProcedure\spBookAddToWishList.sql" />
+    <Build Include="StoreProcedure\spDeleteBook.sql" />
+    <Build Include="StoreProcedure\spDeleteCart.sql" />
+    <Build Include="StoreProcedure\spDeleteWishList.sql" />
+    <Build Include="StoreProcedure\spEmailCheck.sql" />
+    <Build Include="StoreProcedure\spGetAddress.sql" />
+    <Build Include="StoreProcedure\spGetAllBooks.sql" />
+    <Build Include="StoreProcedure\spGetOutOfStockBook.sql" />
+    <Build Include="StoreProcedure\spGetUserCart.sql" />
+    <Build Include="StoreProcedure\spGetUserOrder.sql" />
+    <Build Include="StoreProcedure\spMoveWishListToCart.sql" />
+    <Build Include="StoreProcedure\spOrderBook.sql" />
+    <Build Include="StoreProcedure\spResetAdminPassWord.sql" />
+    <Build Include="StoreProcedure\spResetPassWord.sql" />
+    <Build Include="StoreProcedure\spSearchBookByName.sql" />
+    <Build Include="StoreProcedure\spUpdateAddress.sql" />
+    <Build Include="StoreProcedure\spUpdateBook.sql" />
+    <Build Include="StoreProcedure\spUserLogin.sql" />
+    <Build Include="StoreProcedure\spUserRegistration.sql" />
+    <Build Include="StoreProcedure\spAddCart.sql" />
+    <Build Include="StoreProcedure\spAddImage.sql" />
+    <Build Include="StoreProcedure\spBookFilter.sql" />
+    <Build Include="StoreProcedure\spOrderAllBook.sql" />
+  </ItemGroup>
+</Project>
